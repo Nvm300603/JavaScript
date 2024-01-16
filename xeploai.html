@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+// Khai báo biến để lưu trữ ngày tháng năm sinh
+let ngaySinh = "";
+
+// Hiển thị hộp thoại yêu cầu người dùng nhập vào ngày tháng năm sinh
+ngaySinh = prompt("Nhập vào ngày tháng năm sinh của bạn (dd/mm/yyyy): ");
+
+// Tách chuỗi thành ba phần riêng biệt
+const [ngay, thang, nam] = ngaySinh.split("/");
+
+// Chuyển đổi các phần thành các giá trị số
+const ngayNum = parseInt(ngay);
+const thangNum = parseInt(thang);
+const namNum = parseFloat(nam);
+
+// Tạo đối tượng Date
+const ngaySinhObj = new Date(namNum, thangNum, ngayNum);
+// tinh toan
+let namHienTai = new Date().getFullYear();
+let tuoi = namHienTai - nam;
+
+// kiem tra
+if (tuoi >= 18) {
+  alert("Đi xem phim nhà bà Nữ");
+} else {
+  alert("Ở nhà coi Doreamon");
+}
+</script>
+
+</body>
+</html>

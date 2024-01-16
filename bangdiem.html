@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bảng Điểm Của Em</title>
+        <style>
+#form {
+    max-inline-size: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #e21212;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+input[type="text"],
+select {
+    inline-size: 100%;
+    padding: 8px;
+    margin-block-end: 10px;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+
+input[type="button"][value="Cancel"] {
+    background-color: #d9534f;
+}
+
+input[type="button"][value="Cancel"]:hover {
+    background-color: #c9302c;
+}
+
+
+        </style>
+    </head>
+    <body>
+        <form id="form">
+       
+            <h2>Bảng điểm của em</h2>
+         <P> Semester 1 : </P>   <input type="text" name="" id="s1">
+         <p> Semester 2 :</p> <input type="text" name="" id="s2">
+         <p>Year : </p> 
+         <select name="" id="year">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+         </select>
+         <p>Summary : </p> <input type="text" name="" id="sum">
+        <input type="button" name="" onclick="functionOk()" id="" value="OK"></input>
+        <input type="button"name="" id="" onclick="functionCacel()" value="Cancel" ></input> 
+        </form>
+    
+    </body>
+    <script>
+function functionOk(){
+    let hk1= parseInt(document.getElementById("s1").value);
+    let hk2= parseInt(document.getElementById("s2").value);
+    let y = document.getElementById('year');
+    // let value=y[y.SelectedIndex].value;
+    // var value = y[y.SelectedIndex].value;
+    let value = parseInt(y.options[y.selectedIndex].value);
+    // let value = parseInt(y.options[y.selectedIndex].value);
+
+
+    let result;
+    if(value ==1 )
+    {
+        result=((hk1+(hk2*3))/3);
+    }
+    else if (value == 2){
+        result=((hk1+(hk2*3))/4);
+
+    }
+    else if (value ==2){
+        result=((hk1+(hk2*3))/5);
+
+    }
+    document.getElementById("sum").value=result;
+}
+function functionCacel(){
+    document.getElementById('s1').value="";
+    document.getElementById('s2').value="";
+    document.getElementById('sum').value="";
+}
+    </script>
+</html>
