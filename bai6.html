@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+    body { /* định dạng body căn giữa ndung*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .buttons
+    {
+        margin: 20px; /* định dạng container cho các nút*/
+    }
+    .traffic-light 
+    {
+        /* định dạng container cho đèn giao thông*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.traffic-light .signal
+{
+    /* định dạng container cho tín hiệu đèn*/
+    width: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(77, 73, 75);
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+/* .traffic-light .signal >div{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px 0;
+    background-color: rgba(0,0,0,0.3);
+} */
+
+.traffic-light .pole
+{
+    /* Đingj dạng cột của đèn giao thông*/
+    width: 20px;
+    height: 180px;
+    background-color: rgb(66, 60, 62);
+}
+
+.red {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: rgba(241, 7, 7, 0.2);
+}
+.green {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    
+    background-color: rgba(10, 243, 2, 0.2);
+    
+}
+.yellow {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: rgba(243, 247, 6, 0.2);
+}
+
+/* Định dạng trạng thái hoạt động của đèn */
+.red.active {
+    background-color: red;
+}
+
+.yellow.active {
+    background-color: yellow;
+}
+
+.green.active {
+    background-color: green;
+}
+    </style>
+</head>
+<body>
+  <div class="main"> <!-- Div chính chứa toàn bộ nội dung trang -->
+    <div class="buttons">
+        <button onclick="turnOnRed()">Red</button>
+        <button onclick="turnOnYellow()">Yellow</button>
+        <button onclick="turnOnGreen()">Green</button>
+    </div>
+    <div class="traffic-light">
+        <!--cho tín hiệu đèn đỏ vàg xanh-->
+        <div class="signal">
+            <div class="light red" id="red"></div>
+            <div class="light yellow" id="yellow"></div>
+            <div class="light green" id="green"></div>
+            </div>
+        <div class="pole"></div>
+        </div>
+    </div>
+  </div>
+    <script >
+        function turnOnRed() {
+            // Hàm để bật đèn đỏ và làm mới các đèn khác
+            resetLights();
+            document.getElementById('red').classList.add('active');
+        }
+
+        function turnOnYellow() {
+            resetLights();
+            document.getElementById('yellow').classList.add('active');
+        }
+
+        function turnOnGreen() {
+            resetLights();
+            document.getElementById('green').classList.add('active');
+        }
+
+        function resetLights() {
+                // Hàm để làm mới tất cả các đèn về trạng thái không hoạt động
+            const lights = document.querySelectorAll('.light');
+            lights.forEach(light => {
+            light.classList.remove('active');
+    });
+}
+    </script>
+</body>
+</html>
