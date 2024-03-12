@@ -1,0 +1,103 @@
+*{
+    font-family: "Nunito",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+html{
+    font-size: 20px;
+}
+.container{
+    margin: 30px;
+    font-size: 12px;
+}
+.bt1:hover{
+    background-color: red;
+    color: white;
+}
+#bt2:hover{
+    background-color: red;
+    color: white;
+
+}
+#bt3:hover{
+    background-color: red;
+    color: white;
+}
+
+.products{
+    padding: 3rem 8%;
+
+}
+.products .products-container .box{
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    background-color: #faf9f9;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 /15%);
+    border-radius: 0.5rem;
+    outline: 2px solid #faf9f9;
+}
+.products .products-container .box:hover{
+    outline: 3px solid #dd0028;
+}
+.box-text{
+    text-align: center;
+
+}
+.products .products-container .box img{
+    width: 70%;
+    margin-bottom: 3rem;
+}
+.products-container .box h6{
+    font-weight: 800;
+    font-size: 13px;
+   
+}
+.products-container .box h2{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    color: #ff9c01;
+}
+.products-container .box del{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-decoration: line-through;
+}
+.products-container .box .price{
+    font-size: 1.8rem;
+    color: #dd0028;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.products-container .box 
+.ph-shopping-cart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #dd0028;
+    color: #faf9f9;
+    font-size: 2rem;
+    border-radius: 0.5rem 0;
+    cursor: pointer;
+}
+.products-container .box 
+.ph-shopping-cart:hover{
+    background-color: #ff9c01;
+    transition: 0.2s all linear;
+}
+.products-container .box .ph-heart{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #dd0028;
+}
+.products-container .box .ph-heart:hover{
+color: #ff9c01;
+transition: 0.2s all linear;
+} 
